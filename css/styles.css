@@ -1,0 +1,133 @@
+/* General Style */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container-fluid {
+	padding: 0;
+	margin: 0;
+}
+
+/* Sidebar Style */
+
+#sidebar {
+	position: fixed;
+	width: 300px;
+	min-height: 900px;
+	background: #333333;
+	opacity: 0.9;
+	left: -300px;
+	transition: all 0.5s;
+	z-index: 2;
+}
+
+#sidebar ul li {
+	color: rgba(230, 230, 230, 0.9);
+	list-style: none;
+	padding: 15px 10px;
+	font-size: 0.9em;
+}
+
+#sidebar.active {
+	left: 0px;
+}
+
+@media only screen and (max-height: 600px) {
+	#sidebar ul li {
+		padding: 10px 10px;
+	}
+}
+
+#sidebar .toggle-btn {
+	position: absolute;
+	left: 320px;
+	top: 20px;
+}
+
+#sidebar span {
+	color: #333333;
+	cursor: pointer;
+}
+
+.locations {
+    padding: 3px 5px 5px 5px;
+}
+
+.app-title {
+    padding: 20px 5px 10px 5px;
+    color: #fff;
+    margin-left: 10%;
+}
+
+.search {
+    width: 90%;
+    font-size: .9em;
+    border: none;
+    margin: 15px 10px;
+    padding: 8px;
+}
+
+/* Map Style */
+
+#map {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+}
+
+/* Map InfoWindow Style */
+
+.info-title {
+    font-size: 1.2em;
+}
+
+.info-subtitle {
+    font-size: 1em;
+}
+
+.info-address {
+    margin-bottom: 0;
+    font-size: .9em;
+}
+
+.foursquare {
+	position: absolute;
+	z-index: 1;
+	right: 3.5%;
+	top: 1.5%;
+	max-width: 180px;
+	max-height: 60px;
+	background: #fff;
+	margin: 0 auto;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	border-radius: 3px;
+}
+
+.foursquare img {
+	max-width: 20%;
+}
+
+.foursquare a {
+	color: #333333;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+@media only screen and (max-height: 600px) {
+	.foursquare {
+		max-width: 80px;
+		max-height: 60px;
+	}
+
+	.foursquare img {
+		max-width: 50%;
+	}
+
+	.hide {
+		display: none;
+	}
+}

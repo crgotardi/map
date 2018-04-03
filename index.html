@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Neighbourhood Map</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<!-- Sidebar toggle -->
+		<div id="sidebar">
+			<div class="toggle-btn" onclick="toggleSidebar()">
+				<span> <i class="fas fa-bars fa-lg"></i></span>
+			</div>
+			<h4 class="app-title">Neighborhood Map</h4>
+			<!-- search bar -->
+			<input class="search" data-bind="textInput: searchItem, valueUpdate: 'after'" placeholder="Search">
+			<!-- locations -->
+			<ul data-bind="foreach: myLocationsSearch"> 
+				<a href="#"><li class="app-item locations" data-bind="text: title, click: $parent.populate">Example</li></a>
+			</ul>
+		</div>
+		<!-- map -->
+		<div id="map"></div>
+		<div class="foursquare"><a href="https://pt.foursquare.com/"><p class="text-center"><span class="hide">Powered</span> By:<br><img src="img/foursquare.png" alt="foursquare-icon"></p></a></div>
+	</div>
+
+	<script src='js/knockout-3.4.2.js'></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="js/markers.js"> </script>
+	<script src="js/styles.js"> </script>
+	<script src="js/app.js"> </script>
+	<script src="js/sidebar.js"> </script>
+	<script async defer
+	        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCuqXXH3tIU8SLbzV_xSQbiRw81JQiDTY&v=3&callback=startApp">
+	</script>
+</body>
+</html>
