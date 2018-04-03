@@ -48,7 +48,3 @@ A Google Maps implemenation that shows you the best places around Sorocaba, BR. 
 ### Installation
 
 Clone or download this repo and open the index.html file. You can add locations your own in the js/markers.js file.
-
-### Demo
-
-You can see a demo here
